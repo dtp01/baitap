@@ -65,7 +65,7 @@ foreach ($HocSinh as $hocsinh)
 }
 
 <!-- Viết hàm để tìm học sinh có điểm cao nhất (grade) -->
-function findHighestGradeStudent($HocSinh)
+function timHSdiemcaonhat($HocSinh)
 {
     $diemcaonhat = 0;
     $HSdiemcaonhat = null;
@@ -83,7 +83,7 @@ function findHighestGradeStudent($HocSinh)
 }
 
 <!-- Tìm học sinh có điểm cao nhất -->
-$HSdiemcaonhat = findHighestGradeStudent($HocSinh);
+$HSdiemcaonhat = timHSdiemcaonhat($HocSinh);
 
 <!-- Hiển thị thông tin của học sinh có điểm cao nhất -->
 echo "\nThông tin của học sinh có điểm cao nhất là:\n";
