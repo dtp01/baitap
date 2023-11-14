@@ -67,29 +67,29 @@ foreach ($HocSinh as $hocsinh)
 <!-- Viết hàm để tìm học sinh có điểm cao nhất (grade) -->
 function findHighestGradeStudent($HocSinh)
 {
-    $highestGrade = 0;
-    $highestGradeStudent = null;
+    $diemcaonhat = 0;
+    $HSdiemcaonhat = null;
 
     foreach ($HocSinh as $hocsinh) 
     {
-        if ($hocsinh['grade'] > $highestGrade) 
+        if ($hocsinh['grade'] > $diemcaonhat) 
         {
-            $highestGrade = $hocsinh['grade'];
-            $highestGradeStudent = $hocsinh;
+            $diemcaonhat = $hocsinh['grade'];
+            $HSdiemcaonhat = $hocsinh;
         }
     }
 
-    return $highestGradeStudent;
+    return $HSdiemcaonhat;
 }
 
 <!-- Tìm học sinh có điểm cao nhất -->
-$highestGradeStudent = findHighestGradeStudent($HocSinh);
+$HSdiemcaonhat = findHighestGradeStudent($HocSinh);
 
 <!-- Hiển thị thông tin của học sinh có điểm cao nhất -->
 echo "\nThông tin của học sinh có điểm cao nhất là:\n";
-if ($highestGradeStudent) 
+if ($HSdiemcaonhat) 
 {
-    echo "ID: {$highestGradeStudent['id']}, Name: {$highestGradeStudent['name']}, Age: {$highestGradeStudent['age']}, Grade: {$highestGradeStudent['grade']}\n";
+    echo "ID: {$HSdiemcaonhat['id']}, Name: {$HSdiemcaonhat['name']}, Age: {$HSdiemcaonhat['age']}, Grade: {$HSdiemcaonhat['grade']}\n";
 } else 
 {
     echo "Không có học sinh nào trong danh sách.\n";
